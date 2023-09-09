@@ -2,7 +2,6 @@ local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("ImageLabel")
 local Options = Instance.new("ImageLabel")
 local Exit = Instance.new("ImageButton")
-local Load = Instance.new("ImageButton")
 local Status = Instance.new("ImageLabel")
 local Connected = Instance.new("TextLabel")
 local Welcome = Instance.new("TextLabel")
@@ -12,18 +11,19 @@ local ImageLabel = Instance.new("ImageLabel")
 local Warning = Instance.new("TextLabel")
 local Nickname = Instance.new("TextLabel")
 local Selection = Instance.new("ImageLabel")
-local AdelHub = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-local updated = Instance.new("TextLabel")
-local ImageLabel_2 = Instance.new("ImageLabel")
+local Selection_2 = Instance.new("ScrollingFrame")
 local StrikeHub = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
-local updated_2 = Instance.new("TextLabel")
-local ImageLabel_3 = Instance.new("ImageLabel")
+local Info = Instance.new("TextLabel")
+local Updated = Instance.new("TextLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
 local MxQ = Instance.new("TextButton")
-local TextLabel_3 = Instance.new("TextLabel")
-local updated_3 = Instance.new("TextLabel")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local Info_2 = Instance.new("TextLabel")
+local Updated_2 = Instance.new("TextLabel")
+local AdelHub = Instance.new("TextButton")
 local ImageLabel_4 = Instance.new("ImageLabel")
+local Info_3 = Instance.new("TextLabel")
+local Updated_3 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -34,7 +34,7 @@ Main.Parent = ScreenGui
 Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.297508419, 0, 0.250617296, 0)
+Main.Position = UDim2.new(0.276998878, 0, 0.250617296, 0)
 Main.Size = UDim2.new(0, 516, 0, 403)
 Main.Image = "rbxassetid://14489041755"
 Main.Active = true
@@ -52,22 +52,14 @@ Options.Image = "rbxassetid://14489139990"
 Exit.Name = "Exit"
 Exit.Parent = Options
 Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
 Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Exit.BorderSizePixel = 0
-Exit.Position = UDim2.new(0.0671648309, 0, 0.538629472, 0)
-Exit.Size = UDim2.new(0, 162, 0, 42)
+Exit.Position = UDim2.new(0.0900000036, 0, 0.529999971, 0)
+Exit.Size = UDim2.new(0, 157, 0, 42)
 Exit.Image = "rbxassetid://14489068722"
+Exit.ImageTransparency = 1.000
 Exit.ScaleType = Enum.ScaleType.Crop
-
-Load.Name = "Load"
-Load.Parent = Options
-Load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Load.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Load.BorderSizePixel = 0
-Load.Position = UDim2.new(0.0663765371, 0, 0.18516846, 0)
-Load.Size = UDim2.new(0, 163, 0, 42)
-Load.Image = "rbxassetid://14489085520"
-Load.ScaleType = Enum.ScaleType.Crop
 
 Status.Name = "Status"
 Status.Parent = Main
@@ -115,7 +107,7 @@ Added.BorderSizePixel = 0
 Added.Position = UDim2.new(0.070362471, 0, 0.189573467, 0)
 Added.Size = UDim2.new(0, 280, 0, 39)
 Added.Font = Enum.Font.SourceSans
-Added.Text = "Added King Legacy  (∞ days remaining)"
+Added.Text = "Added King Legacy (∞ days remaining)"
 Added.TextColor3 = Color3.fromRGB(255, 255, 255)
 Added.TextSize = 13.000
 Added.TextXAlignment = Enum.TextXAlignment.Left
@@ -165,7 +157,7 @@ Nickname.Position = UDim2.new(0.223880604, 0, 0.156398103, 0)
 Nickname.Size = UDim2.new(0, 280, 0, 27)
 Nickname.Font = Enum.Font.SourceSansBold
 Nickname.Text = "BloxSenseB1tcH"
-Nickname.TextColor3 = Color3.fromRGB(132, 255, 0)
+Nickname.TextColor3 = Color3.fromRGB(255, 0, 0)
 Nickname.TextSize = 13.000
 Nickname.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -178,189 +170,208 @@ Selection.Position = UDim2.new(0.0499999747, 0, 0.0725930631, 0)
 Selection.Size = UDim2.new(0, 263, 0, 143)
 Selection.Image = "rbxassetid://14489201939"
 
-AdelHub.Name = "AdelHub"
-AdelHub.Parent = Main
-AdelHub.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
-AdelHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AdelHub.BorderSizePixel = 0
-AdelHub.Position = UDim2.new(0.0520620421, 0, 0.299406976, 0)
-AdelHub.Size = UDim2.new(0, 259, 0, 46)
-AdelHub.Font = Enum.Font.SourceSansBold
-AdelHub.Text = " "
-AdelHub.TextColor3 = Color3.fromRGB(0, 0, 0)
-AdelHub.TextSize = 14.000
+Selection_2.Name = "Selection"
+Selection_2.Parent = Main
+Selection_2.Active = true
+Selection_2.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Selection_2.BorderColor3 = Color3.fromRGB(90, 90, 90)
+Selection_2.BorderSizePixel = 0
+Selection_2.Position = UDim2.new(0, 26, 0, 31)
+Selection_2.Size = UDim2.new(0, 262, 0, 139)
+Selection_2.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+Selection_2.ScrollBarThickness = 0
 
-TextLabel.Parent = AdelHub
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.156881094, 0, -0.140847906, 0)
-TextLabel.Size = UDim2.new(0, 200, 0, 44)
-TextLabel.Font = Enum.Font.SourceSansBold
-TextLabel.Text = "AdelHub For King Legacy"
-TextLabel.TextColor3 = Color3.fromRGB(132, 255, 0)
-TextLabel.TextSize = 14.000
-TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+StrikeHub.Name = "StrikeHub"
+StrikeHub.Parent = Selection_2
+StrikeHub.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+StrikeHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StrikeHub.BorderSizePixel = 0
+StrikeHub.Size = UDim2.new(0, 262, 0, 49)
+StrikeHub.Font = Enum.Font.SourceSans
+StrikeHub.Text = ""
+StrikeHub.TextColor3 = Color3.fromRGB(0, 0, 0)
+StrikeHub.TextSize = 14.000
 
-updated.Name = "updated"
-updated.Parent = AdelHub
-updated.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-updated.BackgroundTransparency = 1.000
-updated.BorderColor3 = Color3.fromRGB(0, 0, 0)
-updated.BorderSizePixel = 0
-updated.Position = UDim2.new(0.157000005, 0, 0.282999992, 0)
-updated.Size = UDim2.new(0, 200, 0, 38)
-updated.Font = Enum.Font.SourceSans
-updated.Text = "Updated 19/08/2023 15.00 AM"
-updated.TextColor3 = Color3.fromRGB(255, 255, 255)
-updated.TextSize = 13.000
-updated.TextXAlignment = Enum.TextXAlignment.Left
+Info.Name = "Info"
+Info.Parent = StrikeHub
+Info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info.BackgroundTransparency = 1.000
+Info.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Info.BorderSizePixel = 0
+Info.Position = UDim2.new(0.145038173, 0, 0.163265303, 0)
+Info.Size = UDim2.new(0, 200, 0, 16)
+Info.Font = Enum.Font.SourceSansBold
+Info.Text = "StrikeHub For King Legacy"
+Info.TextColor3 = Color3.fromRGB(132, 255, 0)
+Info.TextSize = 14.000
+Info.TextXAlignment = Enum.TextXAlignment.Left
+Info.TextYAlignment = Enum.TextYAlignment.Top
 
-ImageLabel_2.Parent = AdelHub
+Updated.Name = "Updated"
+Updated.Parent = StrikeHub
+Updated.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Updated.BackgroundTransparency = 1.000
+Updated.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Updated.BorderSizePixel = 0
+Updated.Position = UDim2.new(0.145038173, 0, 0.489795923, 0)
+Updated.Size = UDim2.new(0, 200, 0, 16)
+Updated.Font = Enum.Font.SourceSans
+Updated.Text = "Updated 19/08/2023 15.00 AM"
+Updated.TextColor3 = Color3.fromRGB(255, 255, 255)
+Updated.TextSize = 13.000
+Updated.TextXAlignment = Enum.TextXAlignment.Left
+Updated.TextYAlignment = Enum.TextYAlignment.Top
+
+ImageLabel_2.Parent = StrikeHub
 ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_2.BorderSizePixel = 0
-ImageLabel_2.Position = UDim2.new(0.0229885057, 0, 0.173913047, 0)
+ImageLabel_2.Position = UDim2.new(0.0229007639, 0, 0.183673471, 0)
 ImageLabel_2.Size = UDim2.new(0, 24, 0, 30)
 ImageLabel_2.Image = "rbxassetid://14153664596"
 ImageLabel_2.ScaleType = Enum.ScaleType.Crop
 
-StrikeHub.Name = "StrikeHub"
-StrikeHub.Parent = Main
-StrikeHub.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
-StrikeHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
-StrikeHub.BorderSizePixel = 0
-StrikeHub.Position = UDim2.new(0.0520620421, 0, 0.0800744891, 0)
-StrikeHub.Size = UDim2.new(0, 259, 0, 46)
-StrikeHub.Font = Enum.Font.SourceSansBold
-StrikeHub.Text = " "
-StrikeHub.TextColor3 = Color3.fromRGB(0, 0, 0)
-StrikeHub.TextSize = 14.000
+MxQ.Name = "MxQ"
+MxQ.Parent = Selection_2
+MxQ.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+MxQ.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MxQ.BorderSizePixel = 0
+MxQ.Position = UDim2.new(0, 0, 0.0590000004, 0)
+MxQ.Size = UDim2.new(0, 262, 0, 49)
+MxQ.Font = Enum.Font.SourceSans
+MxQ.Text = ""
+MxQ.TextColor3 = Color3.fromRGB(0, 0, 0)
+MxQ.TextSize = 14.000
 
-TextLabel_2.Parent = StrikeHub
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.157117695, 0, -0.0869565234, 0)
-TextLabel_2.Size = UDim2.new(0, 200, 0, 32)
-TextLabel_2.Font = Enum.Font.SourceSansBold
-TextLabel_2.Text = "StrikeHub For King Legacy"
-TextLabel_2.TextColor3 = Color3.fromRGB(132, 255, 0)
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
-
-updated_2.Name = "updated"
-updated_2.Parent = StrikeHub
-updated_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-updated_2.BackgroundTransparency = 1.000
-updated_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-updated_2.BorderSizePixel = 0
-updated_2.Position = UDim2.new(0.157000005, 0, 0.282999992, 0)
-updated_2.Size = UDim2.new(0, 200, 0, 32)
-updated_2.Font = Enum.Font.SourceSans
-updated_2.Text = "Updated 19/08/2023 15.00 AM"
-updated_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-updated_2.TextSize = 13.000
-updated_2.TextXAlignment = Enum.TextXAlignment.Left
-
-ImageLabel_3.Parent = StrikeHub
+ImageLabel_3.Parent = MxQ
 ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_3.BorderSizePixel = 0
-ImageLabel_3.Position = UDim2.new(0.0229885057, 0, 0.173913047, 0)
+ImageLabel_3.Position = UDim2.new(0.0229007639, 0, 0.183673471, 0)
 ImageLabel_3.Size = UDim2.new(0, 24, 0, 30)
 ImageLabel_3.Image = "rbxassetid://14153664596"
 ImageLabel_3.ScaleType = Enum.ScaleType.Crop
 
-MxQ.Name = "MxQ"
-MxQ.Parent = Main
-MxQ.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
-MxQ.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MxQ.BorderSizePixel = 0
-MxQ.Position = UDim2.new(0.0520620421, 0, 0.189037234, 0)
-MxQ.Size = UDim2.new(0, 259, 0, 46)
-MxQ.Font = Enum.Font.SourceSansBold
-MxQ.Text = " "
-MxQ.TextColor3 = Color3.fromRGB(0, 0, 0)
-MxQ.TextSize = 14.000
+Info_2.Name = "Info"
+Info_2.Parent = MxQ
+Info_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info_2.BackgroundTransparency = 1.000
+Info_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Info_2.BorderSizePixel = 0
+Info_2.Position = UDim2.new(0.145038173, 0, 0.163265303, 0)
+Info_2.Size = UDim2.new(0, 200, 0, 16)
+Info_2.Font = Enum.Font.SourceSansBold
+Info_2.Text = "MxQ For King Legacy"
+Info_2.TextColor3 = Color3.fromRGB(132, 255, 0)
+Info_2.TextSize = 14.000
+Info_2.TextXAlignment = Enum.TextXAlignment.Left
+Info_2.TextYAlignment = Enum.TextYAlignment.Top
 
-TextLabel_3.Parent = MxQ
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.157000005, 0, 0, 0)
-TextLabel_3.Size = UDim2.new(0, 200, 0, 32)
-TextLabel_3.Font = Enum.Font.SourceSansBold
-TextLabel_3.Text = "MxQ For King Legacy"
-TextLabel_3.TextColor3 = Color3.fromRGB(132, 255, 0)
-TextLabel_3.TextSize = 14.000
-TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+Updated_2.Name = "Updated"
+Updated_2.Parent = MxQ
+Updated_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Updated_2.BackgroundTransparency = 1.000
+Updated_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Updated_2.BorderSizePixel = 0
+Updated_2.Position = UDim2.new(0.145038173, 0, 0.489795923, 0)
+Updated_2.Size = UDim2.new(0, 200, 0, 16)
+Updated_2.Font = Enum.Font.SourceSans
+Updated_2.Text = "Updated 01/09/2023 15.00 AM"
+Updated_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Updated_2.TextSize = 13.000
+Updated_2.TextXAlignment = Enum.TextXAlignment.Left
+Updated_2.TextYAlignment = Enum.TextYAlignment.Top
 
-updated_3.Name = "updated"
-updated_3.Parent = MxQ
-updated_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-updated_3.BackgroundTransparency = 1.000
-updated_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-updated_3.BorderSizePixel = 0
-updated_3.Position = UDim2.new(0.157000005, 0, 0.282999992, 0)
-updated_3.Size = UDim2.new(0, 200, 0, 39)
-updated_3.Font = Enum.Font.SourceSans
-updated_3.Text = "Updated 01/09/2023 15.00 AM"
-updated_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-updated_3.TextSize = 13.000
-updated_3.TextXAlignment = Enum.TextXAlignment.Left
+AdelHub.Name = "AdelHub"
+AdelHub.Parent = Selection_2
+AdelHub.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+AdelHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AdelHub.BorderSizePixel = 0
+AdelHub.Position = UDim2.new(0, 0, 0.116999999, 0)
+AdelHub.Size = UDim2.new(0, 262, 0, 49)
+AdelHub.Font = Enum.Font.SourceSans
+AdelHub.Text = ""
+AdelHub.TextColor3 = Color3.fromRGB(0, 0, 0)
+AdelHub.TextSize = 14.000
 
-ImageLabel_4.Parent = MxQ
+ImageLabel_4.Parent = AdelHub
 ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_4.BorderSizePixel = 0
-ImageLabel_4.Position = UDim2.new(0.0229885057, 0, 0.173913047, 0)
+ImageLabel_4.Position = UDim2.new(0.0229007639, 0, 0.183673471, 0)
 ImageLabel_4.Size = UDim2.new(0, 24, 0, 30)
 ImageLabel_4.Image = "rbxassetid://14153664596"
 ImageLabel_4.ScaleType = Enum.ScaleType.Crop
 
+Info_3.Name = "Info"
+Info_3.Parent = AdelHub
+Info_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info_3.BackgroundTransparency = 1.000
+Info_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Info_3.BorderSizePixel = 0
+Info_3.Position = UDim2.new(0.145038173, 0, 0.163265303, 0)
+Info_3.Size = UDim2.new(0, 200, 0, 16)
+Info_3.Font = Enum.Font.SourceSansBold
+Info_3.Text = "AdelHub For King Legacy"
+Info_3.TextColor3 = Color3.fromRGB(132, 255, 0)
+Info_3.TextSize = 14.000
+Info_3.TextXAlignment = Enum.TextXAlignment.Left
+Info_3.TextYAlignment = Enum.TextYAlignment.Top
+
+Updated_3.Name = "Updated"
+Updated_3.Parent = AdelHub
+Updated_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Updated_3.BackgroundTransparency = 1.000
+Updated_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Updated_3.BorderSizePixel = 0
+Updated_3.Position = UDim2.new(0.145038173, 0, 0.489795923, 0)
+Updated_3.Size = UDim2.new(0, 200, 0, 16)
+Updated_3.Font = Enum.Font.SourceSans
+Updated_3.Text = "Updated 19/08/2023 15.00 AM"
+Updated_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Updated_3.TextSize = 13.000
+Updated_3.TextXAlignment = Enum.TextXAlignment.Left
+Updated_3.TextYAlignment = Enum.TextYAlignment.Top
+
 -- Scripts:
 
-local function JBVPQ_fake_script() -- Exit.LocalScript 
+local function ZPXU_fake_script() -- Exit.LocalScript 
 	local script = Instance.new('LocalScript', Exit)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.CoreGui.ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(JBVPQ_fake_script)()
-local function FFNTZV_fake_script() -- Nickname.LocalScript 
+coroutine.wrap(ZPXU_fake_script)()
+local function KAQZPTK_fake_script() -- Nickname.LocalScript 
 	local script = Instance.new('LocalScript', Nickname)
 
 	local plr = game.Players.LocalPlayer
 	
 	script.Parent.Text = ""..plr.Name..""
 end
-coroutine.wrap(FFNTZV_fake_script)()
-local function WWNGBJS_fake_script() -- AdelHub.LocalScript 
-	local script = Instance.new('LocalScript', AdelHub)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ua835818/aaa/main/ADLH419851395815818935", true))()
-	end)
-end
-coroutine.wrap(WWNGBJS_fake_script)()
-local function KTUMYNV_fake_script() -- StrikeHub.LocalScript 
+coroutine.wrap(KAQZPTK_fake_script)()
+local function XOFL_fake_script() -- StrikeHub.LocalScript 
 	local script = Instance.new('LocalScript', StrikeHub)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ua835818/aaa/main/STR1K3H7B8914851384183", true))()
 	end)
 end
-coroutine.wrap(KTUMYNV_fake_script)()
-local function OXZD_fake_script() -- MxQ.LocalScript 
+coroutine.wrap(XOFL_fake_script)()
+local function BXIXUJH_fake_script() -- MxQ.LocalScript 
 	local script = Instance.new('LocalScript', MxQ)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ua835818/aaa/main/MKRXQURTYZ13413413", true))()
 	end)
 end
-coroutine.wrap(OXZD_fake_script)()
+coroutine.wrap(BXIXUJH_fake_script)()
+local function JGXQ_fake_script() -- AdelHub.LocalScript 
+	local script = Instance.new('LocalScript', AdelHub)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ua835818/aaa/main/ADLH419851395815818935", true))()
+	end)
+end
+coroutine.wrap(JGXQ_fake_script)()
